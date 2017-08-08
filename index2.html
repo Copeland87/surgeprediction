@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Location Tracking test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../surgeprediction/assets/styling/css2.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap">
+
+</script>
+<script src="../surgeprediction/assets/javascript/app2.js"></script>
+    <!-- <div id="div1">
+            <p id="demo">Test</p>
+        </div>
+        <div id="div2">
+            <p id="mapholder">map holder</p>
+        </div>
+
+    <script>
+        var x = $("#demo");
+        $("#demo").html("things and stuff");
+        console.log(x);
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+                console.log(position.coords.latitude);
+        }
+        function showPosition(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+" & zoom=14 & size=400x300& sensor=false & key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8";
+            console.log(img_url);
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        };
+</script> -->
+
+</body>
+
+</html>
