@@ -1,12 +1,26 @@
+#midnight {
+	color: #31237D;
+}
+
 #bg1 {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.9;
+
 }
 
 .cbg {
 	background-color: #31237d;
 	color: #FFE83C;
 }
+
+#pad1 {
+	margin: 0 5 0 0;
+}
+
+.cbg2 {
+	border: solid 2px #FFE83C;
+}
+
