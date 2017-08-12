@@ -13,21 +13,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../surgeprediction/assets/styling/css2.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+    
+    <div id="zipCode">This should display the zipCode</div>
+    <div id="hourlyForecast">this hsould  display the hourly forecast</div>
     <div id="map"></div>
+   
     <!-- Replace the value of the key parameter with your own API key. -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap">
-
-</script>
-<script src="../surgeprediction/assets/javascript/app2.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="../surgeprediction/assets/javascript/app2.js"></script>
     <!-- <div id="div1">
             <p id="demo">Test</p>
         </div>
