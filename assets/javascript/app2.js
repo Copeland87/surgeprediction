@@ -87,31 +87,36 @@ $(document).ready(function(){
     messagingSenderId: "807686524220"
   };
   firebase.initializeApp(config);
+  
+  weatherArr = [];
 
    //  ----------  FUCKING WEATHER API BULLSHIT  ---------
    function weather() {
     
    // weatherURL = "http://api.wunderground.com/api/050cc66bcd917a79/geolookup/hourly/q/autoip.json"; 
+   var weatherThings; 
     $.ajax({
             url: "http://api.wunderground.com/api/050cc66bcd917a79/geolookup/hourly/q/autoip.json",
             method: "GET"
         }).done(function (response) {
             console.log(response);
-            for (i = 0; i < 3; i++) {
-                $("#hourlyForecast").append(" " +response.hourly_forecast[i].pop + " rain for hour " + i +"." );
-                // state(response.hourly_forecast[i].pop, i);
-                hourlyRain = response.hourly_forecast[i].pop;
-                database.ref().push({
-                    hourlyRain : hourlyRain,
+            weatherThings = response;
+            // for (i = 0; i < 3; i++) {
+            //     $("#hourlyForecast").append(" " +response.hourly_forecast[i].pop + " rain for hour " + i +"." );
+            //     // setting variable and storing to firebase
+            //     hourlyRain = response.hourly_forecast[i].pop;
+            //     database.ref().push({
+            //         hourlyRain : hourlyRain,
 
-                });
-            }
+            //     });
+            // }
            // $("#hourlyForecast").html(response.hourly_forecast[0].pop + "% hour 1. " + response.hourly_forecast[1].pop+ "% hour 2 " + response.hourly_forecast[2].pop + "% hour 3");
         })
-
+        return weatherThings;
+        state (weatherThings);
    };
     weather();
-
+function ticketMasterThings(){
 //  --------- TICKETMASTER URL FUCKING-BULLSHIT  ----------
 var currentTime = moment();
 console.log(currentTime);
@@ -126,6 +131,7 @@ console.log(urlEndTime);
 var tmURL = urlCurrentDate + "T" + urlCurrentTime + "Z&endDateTime=" + urlCurrentDate + "T" + urlEndTime;
 console.log(tmURL);
 
+var ticketMasterVariable;
 //  ----------  TICKET MASTER FUCKING BULLSHIT  ----------
  $.ajax({
   type:"GET",
@@ -144,29 +150,14 @@ console.log(tmURL);
               console.log(json);
               // Parse the response.
               // Do other things.
+              ticketMasterVariable = json;
            },
   error: function(xhr, status, err) {
               // This time, we do not end up here!
            }
 });
-
-  $('#submit-train').on('click',function(){
-  	event.preventDefault();
-  	name = $('#train-name').val().trim();
-  	destination = $('#train-destination').val().trim();
-  	freakquency = $('#train-Freakquency').val().trim();
-  	arrival = $('#train-arrival').val().trim();
-
-  	database.ref().push({
-  		name : name,
-  		destination : destination,
-		freakquency : freakquency,
-		arrival : arrival,
-  		
-	  });
-	
-  	
-  });
+    return ticketMasterVariable;
+};
 
     //  ----------  CREATE ARRAY WITH API INFO TO POPULATE AJAX CALL 9IF POSSIBLE  ---------
     // arrURL = [
@@ -183,25 +174,39 @@ console.log(tmURL);
     // state1 variable state2 variable && state3 variable ----- THIS FUNCTION PUSHES TO GLOBAL STATE ARRAY
     // -----DREW---- I have started coding how to set the states, but it isn't finsiehd (basically some flushed out psuedo code)
     // -----I think it is better to just set state1 to the rain percentage, and then do another compare of rainState and ticketmaster info
-    // function rainState(random, i) {
-    //     state1 = 0;
-    //     state2 = 0;
-    //     state3 = 0;
-    //     //console.log(random);
-    //     if (response.hourly_forecast[i].pop >= 85) {
-    //         console.log("greater than 85% chance of rain");
-    //         state1 = 85;
-    //     }
-    //     else if (response.hourly_forecast[i].pop >= 85) {
-    //         console.log("greater than 75% change of rain");
-    //         state1 = 75;
-    //     }
-    //     if (response.hourly_forecast[i].pop >= 85) {
-    //         console.log("greater than 50% change of rain");
-    //         state1 = 50;
-    //     }
+var weth = weather();
+console.log(weth);
+var tm = ticketMasterThings();
+
+
+    function state(weth, tm) {
+         for (i = 0; i < 3; i++) {
+                // w.hourly_forecast[i].pop
+                console.log(weth);
+                $("#hourlyForecast").append(" " +weth.hourly_forecast[i].pop + " rain for hour " + i +"." );
+                // setting variable and storing to firebase
+                
+            }
+
+
+    // for loop to advance the state of the pobability of percipitation (pop)
+        state1 = 0;
+        state2 = 0;
+        //console.log(random);
+        if (response.hourly_forecast[i].pop >= .85) {
+            console.log("greater than 85% chance of rain");
+            state1 = 3;
+        }
+        else if (response.hourly_forecast[i].pop >= 85) {
+            console.log("greater than 75% change of rain");
+            state1 = 2;
+        }
+        if (response.hourly_forecast[i].pop >= 85) {
+            console.log("greater than 50% change of rain");
+            state1 = 1;
+        }
         
 
-    // }
-
+    }
+state(weth, tm);
  });
