@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Surge Prediction</title>
+    <title>Surge Prediction</title>
 
-	<!-- BootStrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- CSS Link -->
-	<link rel="stylesheet" type="text/css" href="assets/styling/style.css">
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Cosmo CDN -->
-	<link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
+    <!-- Cosmo CDN -->
+    <link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
 
-	<!-- BootStrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 
-	<!-- JQuery -->
-	<script src="jquery-3.2.1.min.js"></script>
+    <!-- BootStrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<!-- Moment JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/styling/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styling/css2.css">
 
 </head>
 
-<body>
+<body class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bg1" background="assets/images/background2.jpg">
 
 	<!-- Nav Bar -->
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default cbg">
 
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnavi">
 	  <span class="icon-bar"></span>
@@ -45,7 +53,7 @@
 			<table border="0" align="center" cellpadding="0">
 			  <tr><td>
 			    <input type="text" name="q" size="25" style="color:#808080;" maxlength="255" value="Google site search" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
-			      <input type="submit" value="Go!" />
+			      <input id="midnight" type="submit" value="Go!" />
 			      <input type="hidden" name="sitesearch" value="" /></td></tr>
 			    </table>
 			  </div>
@@ -53,10 +61,11 @@
 		  </div>
 
       <div class="collapse navbar-collapse" id="mainnavi">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Blank</a></li>
-          <li><a href="#">Blank</a></li>
-          <li><a href="#">Blank</a></li>
+        <ul class="nav navbar-nav navbar-right" id="#">
+          <li class="cbg2"><a href="https://www.uber.com/fare-estimate/" target="_blank">Uber Fare Estimator</a></li>
+          <br>
+          <li class="cbg2"><a href="https://help.lyft.com/hc/en-us/articles/214218147-How-to-calculate-a-Lyft-ride-s-cost" target="_blank">About Lyft</a></li>
+          <li class="cbg2"><a href="" target="_blank">Blank</a></li>
         </ul>
       </div>
     </div>
@@ -65,22 +74,90 @@
 <div class="clearfix"></div>
 
 	<!-- Main Div -->
-  <div class="container-fluid" id="#">
+  <div class="container-fluid text-center" id="#">
+    <div class="col-lg-12">
+      <ul class="list-group">
+		<li class="list-group-item cbg">Welcome to the Price Guestimation Engine</li>
+	  </ul>
+	</div>
   </div>
+
+  <canvas class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 500px; border: 2px solid;" id="canvas1"></canvas>
+
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 500px; border: 2px solid;" id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap"></script>
+
+  <div class="clearfix"></div><br>
+
+  <div class="container-fluid text-center" id="#">
+    <div class="col-lg-12">
+      <ul class="list-group">
+		<li class="list-group-item cbg">Schedule Your Ride</li>
+	  </ul>
+	</div>
+  </div>
+
+
+<!-- Lyft Button -->
+<div class="container-fluid">
+    <div id="lyft-web-button-parent"></div>
+</div>
+		<script type="text/javascript">
+		!function(e,t,n,o,l,i,a,c,d,r,u,y,f,m,b,s){var B=t.createElement('script');B.async=!0,
+		B.onload=function(){s!==o&&(e[s]=e[o],delete e[o]),b!==l&&(e[b]=e[l],delete e[l]);
+		var n={address:d,latitude:r,longitude:u,name:y};e[s].initialize({clientId:i,clientToken:a,
+		googleApiKey:c,location:n,objectName:s,parentElement:t.body}),e[b].initialize({clientId:i,
+		clientToken:a,location:n,objectName:b,onClick:function(){return e[s].open(),!1},
+		parentElement:f,theme:m})},B.src=n,f.insertBefore(B,f.childNodes[0])}(window,document,
+		'https://cdn.lyft.com/lyft-web-sdk/1.1.2/lyftWebButton.min.js','lyftWebModal',
+		'lyftWebButton','p-1-AzA71Kjf',
+		'tvjbdnjpKyIECwh4e7WpykPt+aPqWowk017Nkgz5aL+n631wZ3bqGN3MugCEk7jMM9NBhQWm0UbSFjJ9oUNcO7ve9X9aCKg4WCHhFJTrx9n3nKa9DnLG8aA=',
+		'AIzaSyDM1BtFnoh45dzTewK-yFSOITUItTJz5Q8',
+		'',
+		'','','',
+		document.getElementById('lyft-web-button-parent'),
+		'mulberry-light','lyftWebButton','lyftWebModal'
+		);
+		</script>
+
+  <div class="clearfix"></div>
+  <br>
 	<!-- 3 Div Sections -->
+		<div class="row text-center">
 	  <!-- weather -->
-		  <div class="container-fluid" id="#">
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+		    <ul class="list-group">
+		      <li class="list-group-item cbg">Weather</li>
+		    </ul>
+		    <canvas style="height: 300px"></canvas>
+		    <div class="#" id="#">
+		    </div>
 		  </div>
 	  <!-- events -->
-		  <div class="container-fluid" id="#">
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+		    <ul class="list-group">
+		      <li class="list-group-item cbg">Events</li>
+		    </ul>
+		    <canvas style="height: 300px"></canvas>
+		    <div class="#" id="#">
+		    </div>
 		  </div>
 	  <!-- random -->
-		  <div class="container-fluid" id="#">
+		  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+		    <ul class="list-group">
+		      <li class="list-group-item cbg">Blank</li>
+		    </ul>
+		    <canvas style="height: 300px"></canvas>
+		    <div class="#" id="#">
+		    </div>
 		  </div>
+		</div>
 
     	
     	<!-- JS Link -->
 		<script src="assets/javascript/app.js"></script>
+		<!-- <script src="assets/javascript/app2.js"></script> -->
 
 	<!-- Footer -->
 
