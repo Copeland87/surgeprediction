@@ -63,7 +63,6 @@
       <div class="collapse navbar-collapse" id="mainnavi">
         <ul class="nav navbar-nav navbar-right" id="#">
           <li class="cbg2"><a href="https://www.uber.com/fare-estimate/" target="_blank">Uber Fare Estimator</a></li>
-          <br>
           <li class="cbg2"><a href="https://help.lyft.com/hc/en-us/articles/214218147-How-to-calculate-a-Lyft-ride-s-cost" target="_blank">About Lyft</a></li>
           <li class="cbg2"><a href="" target="_blank">Blank</a></li>
         </ul>
@@ -71,36 +70,23 @@
     </div>
   </nav>
 
+	<!-- NAVBAR END -->
+
 <div class="clearfix"></div>
 
 	<!-- Main Div -->
   <div class="container-fluid text-center" id="#">
-    <div class="col-lg-12">
+    <div class="col-lg-5">
       <ul class="list-group">
 		<li class="list-group-item cbg">Welcome to the Price Guestimation Engine</li>
 	  </ul>
 	</div>
-  </div>
-
-  <canvas class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 500px; border: 2px solid;" id="canvas1"></canvas>
-
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 500px; border: 2px solid;" id="map"></div>
-    <!-- Replace the value of the key parameter with your own API key. -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap"></script>
-
-  <div class="clearfix"></div><br>
-
-  <div class="container-fluid text-center" id="#">
-    <div class="col-lg-12">
+	<div class="col-lg-6 col-lg-offset-1">
       <ul class="list-group">
 		<li class="list-group-item cbg">Schedule Your Ride</li>
 	  </ul>
-	</div>
-  </div>
 
-
-<!-- Lyft Button -->
-<div class="container-fluid">
+	  
     <div id="lyft-web-button-parent"></div>
 </div>
 		<script type="text/javascript">
@@ -120,9 +106,21 @@
 		'mulberry-light','lyftWebButton','lyftWebModal'
 		);
 		</script>
+	
+  </div>
+
 
   <div class="clearfix"></div>
   <br>
+
+  <canvas class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="height: 500px; border: 2px solid;" id="canvas1"></canvas>
+
+  <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12" style="height: 500px; border: 2px solid;" id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2k4NN21KbS3FjI5Sbm3_WfZsPgMfziQ8&callback=initMap"></script>
+
+  <div class="clearfix"></div><br>
+
 	<!-- 3 Div Sections -->
 		<div class="row text-center">
 	  <!-- weather -->
