@@ -61,7 +61,20 @@ var myChart = new Chart(ctx, {
     }
 });
 
+
+
 var bars = myChart.data.datasets[0];
+
+
+    var rating = bars.data[0];
+    // attempt to use firebase .ref to pull data in this file
+    var fireState = ref.child("state");
+            fireState.on("value", function (snapshot) {
+
+            currentState = snapshot.val();
+            console.log("current state: " + currentState);
+            
+            });
 
 // Change color of data based on data value
 for (i = 0; i < bars.data.length; i++) {
