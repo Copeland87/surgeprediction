@@ -1,3 +1,9 @@
+.navbar {
+	/*border: 2px solid;*/
+	border-color: #FFE83C;
+	color: #FFE83C;
+}
+
 #midnight {
 	color: #31237D;
 }
@@ -16,6 +22,34 @@
 }
 
 .cbg2 {
-	border: solid 2px #FFE83C;
+	padding: 0px;
+	margin: 15px;
 }
 
+<<<<<<< HEAD
+.cbg3 {
+=======
+.cbg3{
+>>>>>>> 3ffe68d38f78121ae4965cfc14a7efc4f72ca0d2
+	border-left: solid 2px #FFE83C;
+	padding-left: 30px;
+}
+
+#traffic-b {
+	background-color: #31237D;
+	color: #FFE83C;
+}
+
+#transit-b {
+	background-color: #31237D;
+	color: #FFE83C;
+}
+
+#bike-b {
+	background-color: #31237D;
+	color: #FFE83C;
+}
+
+#canvas1{
+	opacity: 1;
+}
