@@ -32,6 +32,14 @@
 	padding-left: 30px;
 }
 
+.floatl {
+	float-left;
+}
+
+#lbtnl {
+	border-radius: 7px;
+}
+
 #traffic-b {
 	background-color: #31237D;
 	color: #FFE83C;
