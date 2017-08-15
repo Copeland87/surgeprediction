@@ -1,6 +1,4 @@
-$(document).ready(function () {
-
-    // Initialize Firebase
+ // Initialize Firebase
     var config = {
         apiKey: "AIzaSyCCy8pzN-PhzClI9_biA_eNwXlK77CMrtw",
         authDomain: "surgeprediction.firebaseapp.com",
@@ -12,11 +10,11 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     database = firebase.database();
 
-
     var ref = database.ref("saving-data");
     var popRef = ref.child("rain");
     var tmRef = ref.child("ticketMaster");
     var tmEventRef = ref.child("ticketMaster").child("tmObject").child("page");
+
 
     //  ----------  FUCKING WEATHER API BULLSHIT  ---------
     function weather() {
@@ -102,9 +100,9 @@ $(document).ready(function () {
         popRef.on("value", function (snapshot) {
 
             currentPOP = snapshot.val();
-            console.log("current pop: " + currentPOP.hour1);
+            console.log("state function current pop: " + currentPOP.hour1);
             POP = currentPOP.hour1;
-            console.log("pop" + POP);
+            console.log("state function var POP value: " + POP);
 
             // sets var for an event ending this hour
             tmEventRef.on("value", function (snapshot) {
@@ -172,8 +170,8 @@ $(document).ready(function () {
                 else {
                     state = 0;
                 }
-                console.log(POP);
-                console.log(state);
+                console.log("end of logic pop value: " + POP);
+                console.log("end of logic state value: " + state);
                 var fireState = ref.child("state");
                 fireState.update({
                     state: state
@@ -186,5 +184,5 @@ $(document).ready(function () {
 
     };
     state();
-// end of doc ready
-});
+// // end of doc ready
+// });

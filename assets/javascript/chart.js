@@ -34,11 +34,11 @@ var myChart = new Chart(ctx, {
         },
         scales: {
             xAxes: [{
-                gridLines:{
+                gridLines: {
                     display: true,
                     color: '#FFFFFF'
                 },
-                ticks:{
+                ticks: {
                     display: true,
                     fontColor: '#FFFFFF'
                 }
@@ -52,7 +52,7 @@ var myChart = new Chart(ctx, {
                     stepValue: 10,
                     fontColor: '#FFFFFF'
                 },
-                gridLines:{
+                gridLines: {
                     display: true,
                     color: '#FFFFFF'
                 }
@@ -65,16 +65,27 @@ var myChart = new Chart(ctx, {
 
 var bars = myChart.data.datasets[0];
 
-
+function getState() {
     var rating = bars.data[0];
+    var chartState1;
+    var chartState2;
+    var chartState3;
+    console.log("rating pulled from bars.data[0] " + rating)
     // attempt to use firebase .ref to pull data in this file
     var fireState = ref.child("state");
-            fireState.on("value", function (snapshot) {
+    fireState.on("value", function (snapshot) {
 
-            currentState = snapshot.val();
-            console.log("current state: " + currentState);
-            
-            });
+        currentState = snapshot.val();
+        console.log("chart.js current state: " + currentState.state);
+        chartState1 = parseInt(currentState.state);
+        console.log("var chartState: " + chartState1);
+    });
+   bars.data[0] = chartState1;
+   bars.data[1] = chartState2;
+   bars.data[2] = chartState3;
+   console.log("bars.data[0] " + bars.data[0]);
+};
+getState();
 
 // Change color of data based on data value
 for (i = 0; i < bars.data.length; i++) {
