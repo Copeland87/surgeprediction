@@ -16,6 +16,10 @@
 	opacity: 0.9;
 }
 
+.alignride {
+	text-align: center;
+}
+
 .cbg {
 	background-color: #31237d;
 	color: #FFE83C;
@@ -32,21 +36,43 @@
 	padding-left: 30px;
 }
 
+
+
+#lbtnl {
+	border-radius: 7px;
+}
+
 #traffic-b {
+	text-align: center;
 	background-color: #31237D;
 	color: #FFE83C;
 }
 
 #transit-b {
+	text-align: center;
 	background-color: #31237D;
 	color: #FFE83C;
 }
 
 #bike-b {
+	text-align: center;
 	background-color: #31237D;
 	color: #FFE83C;
 }
 
 #canvas1 {
 	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.cbg2 {
+		border-left: solid 2px #FFE83C;
+		border-right: solid 2px #FFE83C;
+		text-align: center;
+		color: #FFE83C;
+	}
+
+	.cbg3 {
+		padding: 0;
+	}
 }
