@@ -16,7 +16,13 @@
 }
 
 .cbg2 {
-	border: solid 2px #FFE83C;
+	padding: 0px;
+	margin: 15px;
+}
+
+.cbg3{
+	border-left: solid 2px #FFE83C;
+	padding-left: 30px;
 }
 
 #traffic-b {
@@ -32,4 +38,8 @@
 #bike-b {
 	background-color: #31237D;
 	color: #FFE83C;
+}
+
+#canvas1{
+	opacity: 1;
 }
