@@ -26,11 +26,8 @@
 	margin: 15px;
 }
 
-<<<<<<< HEAD
+
 .cbg3 {
-=======
-.cbg3{
->>>>>>> 3ffe68d38f78121ae4965cfc14a7efc4f72ca0d2
 	border-left: solid 2px #FFE83C;
 	padding-left: 30px;
 }
@@ -50,6 +47,6 @@
 	color: #FFE83C;
 }
 
-#canvas1{
+#canvas1 {
 	opacity: 1;
 }

@@ -1,206 +1,173 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Surge Prediction</title>
+    <title>Ayo</title>
 
-	<!-- metas -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- BootStrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	  crossorigin="anonymous">
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Cosmo CDN -->
-	<link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
+    <!-- Cosmo CDN -->
+    <link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css">
 
-	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 
-	<!-- BootStrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	  crossorigin="anonymous"></script>
+    <!-- BootStrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<!-- Moment JS -->
-	<script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
 
-	<!-- CSS Link -->
-	<link rel="stylesheet" type="text/css" href="assets/styling/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/styling/css2.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/styling/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styling/css2.css">
 
 </head>
 
 <body class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bg1" background="assets/images/background2.jpg">
 
-	<!-- Nav Bar -->
+  <!-- Nav Bar -->
 
-	<nav class="navbar navbar-default cbg">
+  <nav class="navbar navbar-default cbg">
 
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnavi">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnavi">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
   </button>
 
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Surge Predictor</a>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Prime Time Avoidance Engine</a>
+   
+
+      <form method="get" action="http://www.google.com/search">
+        <div>
+      <table border="0" align="center" cellpadding="0">
+        <tr><td>
+          <input type="text" name="q" size="25" style="color:#808080;" maxlength="255" value="Google site search" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+            <input id="midnight" type="submit" value="Go!" />
+            <input type="hidden" name="sitesearch" value="" /></td></tr>
+          </table>
+        </div>
+      </form>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainnavi">
+        <ul class="nav navbar-nav navbar-right" id="#">
+          <li class="cbg2"><a href="https://help.lyft.com/hc/en-us/articles/214218147-How-to-calculate-a-Lyft-ride-s-cost" target="_blank">About Lyft</a></li>
+          <li class="cbg2 cbg3"><a href="https://www.lyft.com/cities" target="_blank">Calculate Your Lyft</a></li>
+          <li class="cbg2 cbg3"><a href="https://www.lyft.com/airports#airport-list" target="_blank">Air Lyft</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NAVBAR END -->
+
+<div class="clearfix"></div>
+
+  <!-- Main Div -->
 
 
-				<form method="get" action="http://www.google.com/search">
-					<div>
-						<table border="0" align="center" cellpadding="0">
-							<tr>
-								<td>
-									<input type="text" name="q" size="25" style="color:#808080;" maxlength="255" value="Google site search" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';"
-									  onblur="if(this.value=='')this.value=this.defaultValue;" />
-									<input id="midnight" type="submit" value="Go!" />
-									<input type="hidden" name="sitesearch" value="" /></td>
-							</tr>
-						</table>
-					</div>
-				</form>
-			</div>
+    <!-- Ride -->
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <ul class="list-group">
+        <li class="list-group-item cbg">Schedule Your Ride</li>
+      </ul>
 
-			<div class="collapse navbar-collapse" id="mainnavi">
-				<ul class="nav navbar-nav navbar-right" id="#">
-					<li class="cbg2"><a href="https://www.uber.com/fare-estimate/" target="_blank">Uber Fare Estimator</a></li>
-					<li class="cbg2 cbg3"><a href="https://help.lyft.com/hc/en-us/articles/214218147-How-to-calculate-a-Lyft-ride-s-cost" target="_blank">About Lyft</a></li>
-					<li class="cbg2 cbg3"><a href="" target="_blank">Blank</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- NAVBAR END -->
-
-	<div class="clearfix"></div>
-
-	<!-- Main Div -->
-	<div class="container-fluid text-center" id="#">
-		<div class="col-lg-6">
-			<ul class="list-group">
-				<li class="list-group-item cbg">Welcome to the Price Guestimation Engine</li>
-			</ul>
-		</div>
-		<div class="col-lg-5 col-lg-offset-1">
-			<ul class="list-group">
-				<li class="list-group-item cbg">Schedule Your Ride</li>
-			</ul>
+      <div id="lyft-web-button-parent"></div>
+    </div>
 
 
-			<div id="lyft-web-button-parent"></div>
-			<br>
+    <!-- LEFT -->
+    
+    <div class="clearfix"></div>
+    <br>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <ul class="list-group">
+        <li class="list-group-item cbg">Your Local Roads</li>
+      </ul>
+              <!-- Buttons for Map Control -->
+              <button id="traffic-b">Traffic</button>
+              <button id="transit-b">Transit</button>
+              <button id="bike-b">Bike</button>
+      <div style="height: 500px; border: 2px solid;" id="map"></div>
+    </div>
 
-		</div>
-		<script type="text/javascript">
-			! function (e, t, n, o, l, i, a, c, d, r, u, y, f, m, b, s) {
-				var B = t.createElement('script');
-				B.async = !0,
-					B.onload = function () {
-						s !== o && (e[s] = e[o], delete e[o]), b !== l && (e[b] = e[l], delete e[l]);
-						var n = {
-							address: d,
-							latitude: r,
-							longitude: u,
-							name: y
-						};
-						e[s].initialize({
-							clientId: i,
-							clientToken: a,
-							googleApiKey: c,
-							location: n,
-							objectName: s,
-							parentElement: t.body
-						}), e[b].initialize({
-							clientId: i,
-							clientToken: a,
-							location: n,
-							objectName: b,
-							onClick: function () {
-								return e[s].open(), !1
-							},
-							parentElement: f,
-							theme: m
-						})
-					}, B.src = n, f.insertBefore(B, f.childNodes[0])
-			}(window, document,
-				'https://cdn.lyft.com/lyft-web-sdk/1.1.2/lyftWebButton.min.js', 'lyftWebModal',
-				'lyftWebButton', 'p-1-AzA71Kjf',
-				'tvjbdnjpKyIECwh4e7WpykPt+aPqWowk017Nkgz5aL+n631wZ3bqGN3MugCEk7jMM9NBhQWm0UbSFjJ9oUNcO7ve9X9aCKg4WCHhFJTrx9n3nKa9DnLG8aA=',
-				'AIzaSyDM1BtFnoh45dzTewK-yFSOITUItTJz5Q8',
-				'',
-				'', '', '',
-				document.getElementById('lyft-web-button-parent'),
-				'mulberry-light', 'lyftWebButton', 'lyftWebModal'
-			);
-		</script>
-	</div>
+    <br>
 
-	<!-- Buttons for Map Control -->
-	<button id="traffic-b">Traffic</button>
-	<button id="transit-b">Transit</button>
-	<button id="bike-b">Bike</button>
-
-	<div class="clearfix"></div>
-	<br>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 500px; border: 2px solid;" id="map">
-		<!-- Replace the value of the key parameter with your own API key. -->
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcFc_Epx8h090pEC12Trq3RGh8dOjwZw4&callback=initMap"></script>
-	</div>
-
-	<div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12" style="height: auto; border: 2px solid; background-Color: midnightblue">
-		<canvas id="canvas1"></canvas>
-	</div>
-
-	<div class="clearfix"></div><br>
-
-	<!-- 3 Div Sections -->
-	<div class="row text-center">
-		<!-- weather -->
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
-			<ul class="list-group">
-				<li class="list-group-item cbg">Weather</li>
-			</ul>
-			<canvas style="height: 300px"></canvas>
-			<div class="#" id="#">
-			</div>
-		</div>
-		<!-- events -->
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
-			<ul class="list-group">
-				<li class="list-group-item cbg">Events</li>
-			</ul>
-			<canvas style="height: 300px"></canvas>
-			<div class="#" id="#">
-			</div>
-		</div>
-		<!-- random -->
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
-			<ul class="list-group">
-				<li class="list-group-item cbg">Blank</li>
-			</ul>
-			<canvas style="height: 300px"></canvas>
-			<div class="#" id="#">
-			</div>
-		</div>
-	</div>
+  <!-- RIGHT -->
+    <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
+      <ul class="list-group">
+        <li class="list-group-item cbg">Chance of Delay</li>
+      </ul>
+    </div><br>
 
 
-	<!-- JS Link -->
-	<script src="assets/javascript/tmap.js"></script>
-	<!-- <script src="assets/javascript/app2.js"></script> -->
+    <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-12" style="height: auto; border: 2px solid; background-Color: midnightblue">
+    <canvas id="canvas1"></canvas>
+  </div>
+    <div class="clearfix"></div><br>
 
-	<!-- Link to chart -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-	<script src="assets/javascript/chart.js"></script>
 
-	<!-- Footer -->
+
+
+  <!-- 3 Div Sections -->
+    <div class="row text-center">
+    <!-- weather -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+        <ul class="list-group">
+          <li class="list-group-item cbg">Weather</li>
+        </ul>
+        <canvas style="height: 300px"></canvas>
+        <div class="#" id="#">
+        </div>
+      </div>
+    <!-- events -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+        <ul class="list-group">
+          <li class="list-group-item cbg">Events</li>
+        </ul>
+        <canvas style="height: 300px"></canvas>
+        <div class="#" id="#">
+        </div>
+      </div>
+    <!-- random -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="#">
+        <ul class="list-group">
+          <li class="list-group-item cbg">Blank</li>
+        </ul>
+        <canvas style="height: 300px"></canvas>
+        <div class="#" id="#">
+        </div>
+      </div>
+    </div>
+
+     
+      <!-- Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+      <!-- JS Link -->
+    <script src="assets/javascript/tmap.js"></script>
+    <script src="assets/javascript/lyft.js"></script>
+    <script src="assets/javascript/api.js"></script>
+
+      <!-- Map JS Link -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcFc_Epx8h090pEC12Trq3RGh8dOjwZw4&callback=initMap"></script>
+
+      <!-- Link to chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="assets/javascript/chart.js"></script>
+
+  <!-- Footer -->
 
 </body>
-
 </html>
