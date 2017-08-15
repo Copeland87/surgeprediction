@@ -26,7 +26,11 @@
 	margin: 15px;
 }
 
+<<<<<<< HEAD
 .cbg3 {
+=======
+.cbg3{
+>>>>>>> 3ffe68d38f78121ae4965cfc14a7efc4f72ca0d2
 	border-left: solid 2px #FFE83C;
 	padding-left: 30px;
 }
@@ -44,4 +48,8 @@
 #bike-b {
 	background-color: #31237D;
 	color: #FFE83C;
+}
+
+#canvas1{
+	opacity: 1;
 }

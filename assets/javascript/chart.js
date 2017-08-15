@@ -27,14 +27,34 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+        legend: {
+            labels: {
+                fontColor: '#FFFFFF'
+            }
+        },
         scales: {
+            xAxes: [{
+                gridLines:{
+                    display: true,
+                    color: '#FFFFFF'
+                },
+                ticks:{
+                    display: true,
+                    fontColor: '#FFFFFF'
+                }
+            }],
             yAxes: [{
                 ticks: {
                     // Forces y-axis to go from 0 to 100
                     beginAtZero: true,
                     max: 100,
                     steps: 10,
-                    stepValue: 10
+                    stepValue: 10,
+                    fontColor: '#FFFFFF'
+                },
+                gridLines:{
+                    display: true,
+                    color: '#FFFFFF'
                 }
             }]
         }
