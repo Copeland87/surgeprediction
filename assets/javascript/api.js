@@ -1,82 +1,5 @@
 $(document).ready(function () {
 
-    // ----------  GOOGLE MAPS API  ----------
-    // Note: This example requires that you consent to location sharing when
-    // prompted by your browser. If you see the error "The Geolocation service
-    // failed.", it means you probably did not give permission for the browser to
-    // locate you.
-    //     var map, infoWindow, geocoder;
-
-    //     function initMap() {
-    //         map = new google.maps.Map(document.getElementById('map'), {
-    //             center: { lat: -34.397, lng: 150.644 },
-    //             zoom: 6
-    //         });
-    //         infoWindow = new google.maps.InfoWindow;
-    //         geocoder = new google.maps.Geocoder;
-    //         // Try HTML5 geolocation.
-    //         if (navigator.geolocation) {
-    //             navigator.geolocation.getCurrentPosition(function (position) {
-    //                 var pos = {
-    //                     lat: position.coords.latitude,
-    //                     lng: position.coords.longitude,
-    //                 };
-    //                 console.log(pos);
-
-    //                 infoWindow.setPosition(pos);
-    //                 infoWindow.setContent('Location found.');
-    //                 infoWindow.open(map);
-    //                 map.setCenter(pos);
-    //                 geocodeLatLng(geocoder, map, infoWindow);
-    //             }, function () {
-    //                 handleLocationError(true, infoWindow, map.getCenter());
-    //                 handleLocationError(true, infoWindow, map.getGeometricCenter());
-    //                 console.log(getGeometricCenter)
-
-    //             });
-    //         } else {
-    //             // Browser doesn't support Geolocation
-    //             handleLocationError(false, infoWindow, map.getCenter());
-    //         }
-    //     };
-
-    //     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    //         infoWindow.setPosition(pos);
-    //         infoWindow.setContent(browserHasGeolocation ?
-    //             'Error: The Geolocation service failed.' :
-    //             'Error: Your browser doesn\'t support geolocation.');
-    //         infoWindow.open(map);
-    //     };
-
-    //     // reverse geocoding
-    // function geocodeLatLng(geocoder, map, infowindow) {
-    //         //var input = document.getElementById('latlng').value;
-    //         //var latlngStr = input.split(',', 2);
-    //         var latlng = {lat: parseFloat(38.8999428), lng: parseFloat(-94.7260105)};
-    //         geocoder.geocode({'location': latlng}, function(results, status) {
-    //             if (status === 'OK') {
-    //             if (results[1]) {
-    //             map.setZoom(11);
-    //             var marker = new google.maps.Marker({
-    //                 position: latlng,
-    //                 map: map
-    //             });
-    //             infowindow.setContent(results[1].formatted_address);
-    //             console.log(results[1].formatted_address);
-    //             infowindow.open(map, marker);
-
-    //             var zipCode = results[0].address_components[7].long_name;
-    //             $("#zipCode").html(zipCode);
-    //             console.log(zipCode);
-    //             } else {
-    //             window.alert('No results found');
-    //             }
-    //         } else {
-    //             window.alert('Geocoder failed due to: ' + status);
-    //         }
-    //         });
-    //     };
-
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyCCy8pzN-PhzClI9_biA_eNwXlK77CMrtw",
@@ -138,12 +61,7 @@ $(document).ready(function () {
         //  ----------  TICKET MASTER FUCKING BULLSHIT  ----------
         $.ajax({
             type: "GET",
-            //--ORIGINAL--
-            // url:"https://app.ticketmaster.com/discovery/v2/events.json?size=1?geoPoint&apikey=xk2KuXCdtzC0ssvGGZAk2ysiqOtl0dd1",
-            //---This is geopoint & 5 mile radius---
-            //  url: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=xk2KuXCdtzC0ssvGGZAk2ysiqOtl0dd1&geoPoint&radius=5&unit=miles",
-            // --- geopoint & 5mile radius & date & time, bitches
-            // url: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=xk2KuXCdtzC0ssvGGZAk2ysiqOtl0dd1&geoPoint&radius=5&unit=miles&startDateTime=2017-08-09T18:52:00Z&endDateTime=2017-08-09T21:53:00Z",
+            
             // -- geopoint five miles date/time, categories of sports & music
             url: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=xk2KuXCdtzC0ssvGGZAk2ysiqOtl0dd1&geoPoint&radius=5&unit=miles&startDateTime=" + tmURL + "Z&classificationName=Sports&classificationId=KZFzniwnSyZfZ7v7nJ",
             // THIS IS WHAT THE tmURL SHOULD BE RECREATING "2017-08-09T18:52:00Z&endDateTime=2017-08-09T21:53:00"
@@ -202,7 +120,7 @@ $(document).ready(function () {
                 else {
                     eventTrue = false;
                 }
-                // ---------------- KEY FOR ADDING STATE VARIABLE ----------------
+                // ---------------- KEY FOR STATE VALUES ----------------
                 // RAIN >85 +5
                 // RAIN >75 +4
                 // RAIN >50 +3
@@ -266,12 +184,7 @@ $(document).ready(function () {
 
         });
 
-
-
-
-
     };
     state();
-
-    // end of doc ready
+// end of doc ready
 });
