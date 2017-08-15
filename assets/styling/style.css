@@ -16,6 +16,12 @@
 	opacity: 0.9;
 }
 
+.intro {
+	margin-top: 0;
+	color: #31237D; 
+	font-weight: bold;
+}
+
 .alignride {
 	text-align: center;
 }
