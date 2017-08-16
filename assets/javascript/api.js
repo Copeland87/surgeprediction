@@ -22,23 +22,29 @@ function weather() {
 
     // weatherURL = "http://api.wunderground.com/api/050cc66bcd917a79/geolookup/hourly/q/autoip.json"; 
     $.ajax({
-        url: "http://api.wunderground.com/api/050cc66bcd917a79/satellite/geolookup/hourly/q/autoip.json",
+        url: "https://api.wunderground.com/api/050cc66bcd917a79/satellite/geolookup/hourly/q/autoip.json",
         method: "GET"
     }).done(function (response) {
         // console.log(response);
         // console.log(response.hourly_forecast[0].pop);
-        for (i = 0; i < 3; i++) {
-            // updating html to make sure this loop is working, it will be useless later
-            $("#events").append(" " + response.hourly_forecast[i].pop + " rain for hour " + i + ".");
-        }
+        
+           
+            $("#pop0").append(response.hourly_forecast[0].pop + "%" + ".");
+            $("#pop1").append(response.hourly_forecast[1].pop + "%" + ".");
+            $("#pop2").append(response.hourly_forecast[2].pop + "%" + ".");
+        
         var rainRef = ref.child("rain");
         rainRef.update({
             hour1: response.hourly_forecast[0].pop,
             hour2: response.hourly_forecast[1].pop,
             hour3: response.hourly_forecast[2].pop
         });
+
+        
+        //var ctx = document.getElementById("satMap").getContext("2d");
         //puts a sat image map in the canvas
         var weatherGif = response.satellite.image_url_vis;
+        //satMap.html('<img src="' + weatherGif + '">');
         // console.log(weatherGif);
 
         $("#satMap").html('<img src="' + weatherGif + '">');
