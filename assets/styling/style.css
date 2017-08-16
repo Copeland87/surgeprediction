@@ -1,3 +1,10 @@
+.body{
+	position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
 .navbar {
 	/*border: 2px solid;*/
 	border-color: #FFE83C;
@@ -68,6 +75,20 @@
 
 #canvas1 {
 	opacity: 1;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: #FFE83C;
+  background-color: #31237D;
+  border-color: #FFE83C;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
