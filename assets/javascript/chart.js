@@ -72,11 +72,11 @@ function makeChart() {
         var chartState;
         var chartState1;
         var chartState2;
-       
+
         // attempt to use firebase .ref to pull data in this file
         var fireState = ref.child("state");
         fireState.on("value", function (snapshot) {
-            
+
             currentState = snapshot.val();
             console.log("chart.js current state: " + currentState.state);
             chartState = currentState.state;
@@ -91,24 +91,24 @@ function makeChart() {
             console.log("bars.data[1] " + bars.data[1]);
             bars.data[2] = chartState2;
             console.log("bars.data[2] " + bars.data[2]);
+
+            // Change color of data based on data value
+            for (i = 0; i < bars.data.length; i++) {
+                if (bars.data[i] <= 33) {
+                    bars.backgroundColor[i] = '#7FFF00';
+                } else if (bars.data[i] > 33 & bars.data[i] <= 66) {
+                    bars.backgroundColor[i] = '#FFFF00';
+                } else if (bars.data[i] > 66 & bars.data[i] <= 85) {
+                    bars.backgroundColor[i] = '#FF8C00';
+                } else {
+                    bars.backgroundColor[i] = '#DC143C';
+                }
+            }
             myChart.update();
         })
     };
     getState();
 
-    // Change color of data based on data value
-    for (i = 0; i < bars.data.length; i++) {
-        if (bars.data[i] <= 33) {
-            bars.backgroundColor[i] = '#7FFF00';
-        } else if (bars.data[i] > 33 & bars.data[i] <= 66) {
-            bars.backgroundColor[i] = '#FFFF00';
-        } else if (bars.data[i] > 66 & bars.data[i] <= 85) {
-            bars.backgroundColor[i] = '#FF8C00';
-        } else {
-            bars.backgroundColor[i] = '#DC143C';
-        }
-    }
-    // Update chart to push data color change
-    myChart.update();
+
 };
 makeChart();
