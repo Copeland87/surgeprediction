@@ -77,6 +77,13 @@
 	opacity: 1;
 }
 
+.fc1 {
+	background-color: #31237D;
+	text-align: center;
+	color: #FFE83C;
+	border-color: #FFE83C;
+}
+
 .footer {
   position: fixed;
   right: 0;
