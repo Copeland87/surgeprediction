@@ -91,7 +91,7 @@ function makeChart() {
             console.log("bars.data[1] " + bars.data[1]);
             bars.data[2] = chartState2;
             console.log("bars.data[2] " + bars.data[2]);
-
+            myChart.update();
             // Change color of data based on data value
             for (i = 0; i < bars.data.length; i++) {
                 if (bars.data[i] <= 33) {
