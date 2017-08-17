@@ -77,6 +77,7 @@
 	opacity: 1;
 }
 
+
 .fc1 {
 	background-color: #31237D;
 	text-align: center;
@@ -84,19 +85,6 @@
 	border-color: #FFE83C;
 }
 
-.footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  color: #FFE83C;
-  background-color: #31237D;
-  border-color: #FFE83C;
-  border-width: 1px 1px 0px 1px;
-  border-style: solid;
-  text-align: center;
-}
 
 @media (max-width: 768px) {
 	.cbg2 {
